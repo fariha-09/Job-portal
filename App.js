@@ -13,13 +13,13 @@ const app=express();
 
 app.use(express.json());
 app.use(cors({
-  origin: "http://localhost:3000", // your React frontend URL
+  origin: "https://job-app-git-main-farihas-projects-aaef69fe.vercel.app", // your React frontend URL
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
 
 
-const port=3001;
+const port=process.env.PORT || 3001;
 
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
@@ -34,10 +34,10 @@ app.use("/form",formRouter);
 
 
 
-app.get("/",(req,res)=>{
+app.get("/",(req,res)=>{i
     res.send(`Users Id is:${req.userid}`);
 })
 
 app.listen(port,()=>{
-    console.log("Port is running on",port)
+    console.log(`Port is running on${port}`)
 })
