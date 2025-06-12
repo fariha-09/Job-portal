@@ -13,7 +13,7 @@ const app=express();
 
 app.use(express.json());
 app.use(cors({
-  origin: "https://job-app-git-main-farihas-projects-aaef69fe.vercel.app", // your React frontend URL
+  origin: "https://job-qbalnmxqx-farihas-projects-aaef69fe.vercel.app", // your React frontend URL
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
@@ -31,10 +31,10 @@ app.use("/form",formRouter);
 
 
 
-app.get("/",(req,res)=>{i
+app.get("/",(req,res)=>{
     res.send(`Users Id is:${req.userid}`);
 })
 
 app.listen(port,()=>{
-    console.log(`Port is running on${port}`)
+    console.log(`Port is running on ${port}`)
 })
