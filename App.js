@@ -13,7 +13,7 @@ const app=express();
 
 app.use(express.json());
 app.use(cors({
-  origin: "job-app-git-main-farihas-projects-aaef69fe.vercel.app", // your React frontend URL
+  origin: "https://job-app-git-main-farihas-projects-aaef69fe.vercel.app", // your React frontend URL
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
