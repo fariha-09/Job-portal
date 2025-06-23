@@ -125,7 +125,7 @@ export const logIn = async (req, res) => {
     res.cookie("token", token, { httpOnly: true });
 
     return res.status(200).json({
-      message: "User logged in successfully.",
+      message:`${existingUser.role === 'company' ? 'Company' : 'User'} logged in successfully.`,
       token: token,
       role: existingUser.role,
     });
