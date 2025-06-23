@@ -39,7 +39,7 @@ const usersSchema = new mongoose.Schema(
       
     },
     keySkills:{
-      type: String,
+      type: [String],
      
     },
      industry:{
