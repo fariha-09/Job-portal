@@ -4,8 +4,9 @@ const usersSchema = new mongoose.Schema(
   {
      role: {
       type: String,
-      enum: ["user", "company"],
-      required: true,
+      enum: ['user', 'company'],
+       default: 'user'
+
     },
     firstName: {
       type: String,

@@ -9,17 +9,14 @@ import authRouter from './src/routes/auth.js';
 import jobRouter from './src/routes/jobRoute.js';
 import formRouter from './src/routes/formRoute.js';
 
-import authentication from './src/middlewares/authentication.js';
-
 const app = express();
 
 app.use(express.json());
 
-// ✅ Recommended Dynamic CORS Setup
 const allowedOrigins = [
-  "https://job-3jx4vl18j-farihas-projects-aaef69fe.vercel.app", // your correct production URL
-  "https://job-app-git-main-farihas-projects-aaef69fe.vercel.app", // your previous/preview URL
-  "http://localhost:3000" // for local development
+  "https://job-3jx4vl18j-farihas-projects-aaef69fe.vercel.app", 
+  "https://job-app-git-main-farihas-projects-aaef69fe.vercel.app", 
+  "http://localhost:3000"
 ];
 
 app.use(cors({
